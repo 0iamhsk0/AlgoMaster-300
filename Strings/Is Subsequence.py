@@ -17,4 +17,4 @@ def isSubsequence(s, t):
 # Test case:
 s = "axc"
 t = "ahbgdc"
-print(isSubsequence(s, t))
+print(isSubsequence(s, t)) #False
