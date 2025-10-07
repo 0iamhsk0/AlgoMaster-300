@@ -1,64 +1,36 @@
-# Valid Parentheses (Easy)
+# Remove All Adjacent Duplicates In String (Easy)
 
 ---
 
-<p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>
+<p>You are given a string <code>s</code> consisting of lowercase English letters. A <strong>duplicate removal</strong> consists of choosing two <strong>adjacent</strong> and <strong>equal</strong> letters and removing them.</p>
 
-<p>An input string is valid if:</p>
+<p>We repeatedly make <strong>duplicate removals</strong> on <code>s</code> until we no longer can.</p>
 
-<ol>
-	<li>Open brackets must be closed by the same type of brackets.</li>
-	<li>Open brackets must be closed in the correct order.</li>
-	<li>Every close bracket has a corresponding open bracket of the same type.</li>
-</ol>
+<p>Return <em>the final string after all such duplicate removals have been made</em>. It can be proven that the answer is <strong>unique</strong>.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;()&quot;</span></p>
-
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
-</div>
+<pre>
+<strong>Input:</strong> s = &quot;abbaca&quot;
+<strong>Output:</strong> &quot;ca&quot;
+<strong>Explanation:</strong> 
+For example, in &quot;abbaca&quot; we could remove &quot;bb&quot; since the letters are adjacent and equal, and this is the only possible move.  The result of this move is that the string is &quot;aaca&quot;, of which only &quot;aa&quot; is possible, so the final string is &quot;ca&quot;.
+</pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;()[]{}&quot;</span></p>
-
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
-</div>
-
-<p><strong class="example">Example 3:</strong></p>
-
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;(]&quot;</span></p>
-
-<p><strong>Output:</strong> <span class="example-io">false</span></p>
-</div>
-
-<p><strong class="example">Example 4:</strong></p>
-
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;([])&quot;</span></p>
-
-<p><strong>Output:</strong> <span class="example-io">true</span></p>
-</div>
-
-<p><strong class="example">Example 5:</strong></p>
-
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;([)]&quot;</span></p>
-
-<p><strong>Output:</strong> <span class="example-io">false</span></p>
-</div>
+<pre>
+<strong>Input:</strong> s = &quot;azxxzy&quot;
+<strong>Output:</strong> &quot;ay&quot;
+</pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>
-	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>
+	<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>s</code> consists of lowercase English letters.</li>
 </ul>
 
 
